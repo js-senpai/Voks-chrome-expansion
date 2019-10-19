@@ -40,7 +40,6 @@ button
   @include reset-button
 a,button,input
   cursor: pointer
-  transition: 2s ease
 a
   text-decoration: none
   color: #fff
@@ -52,7 +51,7 @@ body
   color: #888888
   background: #fff
   font-family: 'Source Sans Pro', sans-serif
-  @include font(400,14px,18px)
+  @include font(normal,14px,18px)
   border: 1px solid #D7D7D7
   box-sizing: border-box
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3)
@@ -93,6 +92,7 @@ img,iframe,video
   background-color: $blue
   border-radius: 5px
   color: #fff
+  font-weight: 600
 .room-text
   color: #888888
   font-size: 12px
@@ -118,6 +118,7 @@ img,iframe,video
   background: #ECEFF1
   color: #555555
   text-align: center
+  font-weight: 600
 .person-url
   display: block
   width: 65%
@@ -127,8 +128,12 @@ img,iframe,video
   width: 25px
   height: 25px
   margin-bottom: 5px
+.small-btn:hover
+  background-color: #2196F3
+  opacity: 0.8
 .small-btn.active
   background-color: #2196F3
+  opacity: 0.5
 .btn-lock
   @include btnIcon('../img/icons/lock.svg')
 .room-password
@@ -137,19 +142,23 @@ img,iframe,video
   padding-left: 15px
 // Rooms container
 .title-rooms
-  color: #888888
-  font-size: 12px
+  a
+    color: #888888
+    font-size: 12px
 .room-item
   display: flex
   justify-content: space-between
   background-color: #fff
   border-radius: 5px
-  border: 1px solid $blue
+  border: 1px solid #BBDEFB
+  box-sizing: border-box
   padding: 5px
   margin-bottom: 5px
 .room-title
-  color: $blue
-  font-size: 14px
+  a
+    color: $blue
+    font-size: 14px
+    font-weight: 600
 .room-date
   color: #888888
   font-size: 12px
@@ -175,8 +184,9 @@ img,iframe,video
   justify-content: space-between
   border-radius: 5px
   align-items: center
-  max-width: 288px
-  width: auto
+  width: 93%
+  position: absolute
+  bottom: 0
 .popup-message.validate
   background-color: #90CAF9
   border: 1px solid #64B5F6
@@ -197,6 +207,7 @@ img,iframe,video
     background-color: #B71C1C
 .popup-title
   font-size: 12px
+  font-weight: normal
 .popup-subtitle
   font-size: 14px
   font-weight: bold
