@@ -1,0 +1,205 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+@media only screen and (max-width: 1178px)
+  .buttons-container
+    grid-template-columns: repeat(5,65px)
+    align-items: center
+    grid-column-gap: 15px
+  .btn
+    height: 65px
+  .btn:nth-of-type(2)
+    .col-messages
+      font-size: 8px
+      width: 15px
+      height: 15px
+      line-height: 15px
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+  /**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+  /**/
+@media screen and (max-width: 950px)
+  .control
+    grid-template-columns: repeat(3,30% 40% 30%)
+  .share-title
+    font-size: 1.4vw
+/* Small Devices, Tablets */
+@media screen and  (max-width: 890px)
+  .buttons-container
+    margin-left: 0
+  .control
+    grid-template-columns: 1fr
+  .time-container,.share-container
+    display: none
+  .btn-more
+    @include btnIcon('../img/icons/person_add.svg')
+  .share-container.active
+    display: flex
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background: radial-gradient(63.85% 63.85% at 50% 50%, #737373 0%, #2C2C2C 100%)
+    z-index: 2
+    flex-direction: column
+    justify-content: space-between
+  .link-mobile-toggle
+    display: flex
+    min-height: 80px
+    justify-content: center
+    align-items: center
+  .share-title
+    padding-left: 0
+    text-align: center
+  .share-link
+    max-width: 95%
+    margin: 0 auto
+  .link, .share-title
+    font-size: 16px
+  .close-container
+    display: block
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    cursor: pointer
+    background-color: #9e9e9e
+  .close-link,.close-chat
+    display: block
+    width: 100%
+    height: 100%
+    @include btnIcon('../img/icons/close.svg')
+  .share-container::before
+    content: ''
+    display: block
+@media screen and (orientation: portrait) and (max-width: 890px)
+  .other-user-container
+    bottom: 20px
+    width: 100%
+    max-width: 100%
+    height: 100%
+    top: inherit
+    flex-direction: row
+    justify-content: space-between
+    padding: 0
+    max-height: 185px
+    .other-user
+      max-width: 235px
+      width: 100%
+      max-height: 100%
+    .other-user,.other-user:nth-of-type(2)
+      margin: 10px
+@media screen and (orientation: landscape) and (max-width: 890px)
+  .share-container.active
+    flex-direction: row
+    align-items: center
+  .link-mobile-toggle
+    width: 80px
+  #main.container
+    display: grid
+    grid-template-columns: 11fr 1fr
+  .user-container,.control
+    height: auto
+  .user-container
+    margin-right: 0
+  .control
+   padding: 20px
+  .buttons-container
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  .btn
+    width: 60px
+    height: 60px
+  .chat.active
+    height: 90vh
+  .other-user-container
+    width: 90px
+    height: auto
+    .other-user
+      height: 90px
+@media only screen and (max-width : 768px)
+  /**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 680px)
+  .control
+    margin-top: 10px
+  .other-user-container
+    bottom: 0
+    .other-user
+      width: 90px
+      height: 90px
+  .btn
+    max-width: 50px
+    max-height: 50px
+  .chat.active
+    background: radial-gradient(63.85% 63.85% at 50% 50%, #737373 0%, #2C2C2C 100%)
+    position: fixed
+    width: 100%
+    max-width: 100%
+    margin: 0
+    padding: 0
+    z-index: 2
+  .chat-mobile-toggle
+    display: flex
+    min-height: 80px
+    justify-content: center
+    align-items: center
+@media screen and (orientation: portrait) and (max-width: 680px)
+    .buttons-container
+      grid-column-gap: 4%
+      grid-template-columns: repeat(5,50px)
+    .other-user-container
+      bottom: 20px
+    .chat-main-container
+      height: 90%
+    .chat-mobile-toggle
+      height: 10%
+    .other-user-container
+      height: 90px
+@media screen and (orientation: landscape) and (max-width: 680px)
+    .chat.active
+      height: 100%
+    .chat
+      flex-direction: row
+      flex-wrap: nowrap
+    .chat-main-container
+      width: 85%
+    .chat-mobile-toggle
+      width: 15%
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+  /**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+  /**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+  /**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+  /**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+  /**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+  /**/
+

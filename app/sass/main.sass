@@ -1,0 +1,208 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "animations"
+html,body
+  overflow: hidden
+  width: 100%
+// Critical css
+::placeholder
+  color: #7c7c7c
+
+*::selection
+  background: #fff
+  color: #673AB7
+*::-moz-selection
+  background: #fff
+  color: #ffffff
+*::-webkit-selection
+  background: #fff
+  color: #ffffff
+/* width */
+::-webkit-scrollbar
+  width: 0
+::-webkit-scrollbar-track
+  background: #f1f1f1
+::-webkit-scrollbar-thumb
+  background: #888
+::-webkit-scrollbar-thumb:hover
+  background: #555
+::placeholder
+  color: #C0C3C5
+input, textarea
+  outline: none
+  &:focus
+    color: #7c7c7c
+*
+  margin: 0
+  padding: 0
+button
+  @include reset-button
+a,button,input
+  cursor: pointer
+  transition: 2s ease
+a
+  text-decoration: none
+  color: #fff
+body
+  width: 300px
+  margin: 0 auto
+  position: relative
+  overflow: hidden
+  color: #888888
+  background: #fff
+  font-family: 'Source Sans Pro', sans-serif
+  @include font(400,14px,18px)
+  border: 1px solid #D7D7D7
+  box-sizing: border-box
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3)
+  border-radius: 5px
+img,iframe,video
+  width: 100%
+  height: 100%
+.hidden
+  display: none !important
+// containers
+.container
+  padding: 0 20px
+.instant-container,.person-container,.rooms
+  padding-top: 20px
+  padding-bottom: 20px
+.instant-container,.rooms
+  background-color: #FAFAFA
+#header,#footer
+  padding: 14px 0
+//Header
+#header,.rooms
+  border-bottom: 1px solid #D7D7D7
+.header-title
+  font-family: 'Montserrat',sans-serif
+  font-style: normal
+  font-weight: bold
+  font-size: 14px
+  line-height: 17px
+  color: $blue
+  margin: 0
+  text-align: center
+  text-transform: uppercase
+// Default settings
+.room-btn
+  display: block
+  width: 260px
+  height: 30px
+  background-color: $blue
+  border-radius: 5px
+  color: #fff
+.room-text
+  color: #888888
+  font-size: 12px
+  text-align: center
+  padding-top: 5px
+// person container
+.person-url-container,.create-url-container
+  display: flex
+  justify-content: space-between
+.person-url-container
+  align-items: center
+.room-password,.create-url-container
+  border-radius: 5px
+  border: 1px solid #CFD8DC
+  overflow: hidden
+  height: 30px
+  width: 220px
+  margin-bottom: 5px
+.main-url
+  width: 35%
+  line-height: 30px
+  display: block
+  background: #ECEFF1
+  color: #555555
+  text-align: center
+.person-url
+  display: block
+  width: 65%
+  @include reset-button
+  padding-left: 15px
+.small-btn
+  width: 25px
+  height: 25px
+  margin-bottom: 5px
+.small-btn.active
+  background-color: #2196F3
+.btn-lock
+  @include btnIcon('../img/icons/lock.svg')
+.room-password
+  width: 243px
+.room-password
+  padding-left: 15px
+// Rooms container
+.title-rooms
+  color: #888888
+  font-size: 12px
+.room-item
+  display: flex
+  justify-content: space-between
+  background-color: #fff
+  border-radius: 5px
+  border: 1px solid $blue
+  padding: 5px
+  margin-bottom: 5px
+.room-title
+  color: $blue
+  font-size: 14px
+.room-date
+  color: #888888
+  font-size: 12px
+.room-btns
+  display: flex
+  align-items: center
+  .small-btn
+    margin-bottom: 0
+    margin-left: 10px
+.btn-reload
+  @include btnIcon('../img/icons/refresh.svg')
+.btn-delete
+  @include btnIcon('../img/icons/delete.svg')
+.copyright
+  text-align: center
+  font-size: 12px
+  .copyright-link
+    color: $blue
+.popup-message
+  margin: 5px
+  padding: 5px
+  display: flex
+  justify-content: space-between
+  border-radius: 5px
+  align-items: center
+  max-width: 288px
+  width: auto
+.popup-message.validate
+  background-color: #90CAF9
+  border: 1px solid #64B5F6
+  .popup-title
+    color: #0D47A1
+  .popup-subtitle
+    color: #0D47A1
+  .close
+    background-color: #0D47A1
+.popup-message.notvalidate
+  background: #EF9A9A
+  border: 1px solid #E57373
+  .popup-title
+    color: #B71C1C
+  .popup-subtitle
+    color: #B71C1C
+  .close
+    background-color: #B71C1C
+.popup-title
+  font-size: 12px
+.popup-subtitle
+  font-size: 14px
+  font-weight: bold
+.close
+  @include btnIcon('../img/icons/close.svg')
+  display: block
+  width: 24px
+  height: 24px
+//@import "media" // Always at the end
