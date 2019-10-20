@@ -63,27 +63,25 @@ img,iframe,video
   display: none !important
 // containers
 .container
-  padding: 0 20px
+  padding: 0 19px
 .instant-container,.person-container,.rooms
   padding-top: 20px
   padding-bottom: 20px
 .instant-container,.rooms
   background-color: #FAFAFA
 #header,#footer
-  padding: 14px 0
+  padding: 10px 0
 //Header
 #header,.rooms
   border-bottom: 1px solid #D7D7D7
-.header-title
-  font-family: 'Montserrat',sans-serif
-  font-style: normal
-  font-weight: bold
-  font-size: 14px
-  line-height: 17px
-  color: $blue
-  margin: 0
-  text-align: center
-  text-transform: uppercase
+.logo
+  width: 62px
+  height: 17px
+  margin: 0 auto
+  @include btnIcon('../img/_src/logo.svg')
+  -webkit-mask-size: 100%
+  mask-size: 100%
+  background-color: $blue
 // Default settings
 .room-btn
   display: block
@@ -98,12 +96,15 @@ img,iframe,video
   font-size: 12px
   text-align: center
   padding-top: 5px
+  line-height: 15px
 // person container
 .person-url-container,.create-url-container
   display: flex
   justify-content: space-between
 .person-url-container
   align-items: center
+  .btn-lock
+    margin-right: 5px
 .room-password,.create-url-container
   border-radius: 5px
   border: 1px solid #CFD8DC
@@ -125,9 +126,10 @@ img,iframe,video
   @include reset-button
   padding-left: 15px
 .small-btn
-  width: 25px
-  height: 25px
+  width: 20px
+  height: 20px
   margin-bottom: 5px
+  opacity: 0.5
 .small-btn:hover
   background-color: #2196F3
   opacity: 0.8
@@ -142,6 +144,7 @@ img,iframe,video
   padding-left: 15px
 // Rooms container
 .title-rooms
+  margin-bottom: 5px
   a
     color: #888888
     font-size: 12px
@@ -152,7 +155,7 @@ img,iframe,video
   border-radius: 5px
   border: 1px solid #BBDEFB
   box-sizing: border-box
-  padding: 5px
+  padding: 5px 9px
   margin-bottom: 5px
 .room-title
   a
@@ -179,7 +182,7 @@ img,iframe,video
     color: $blue
 .popup-message
   margin: 5px
-  padding: 5px
+  padding: 10px
   display: flex
   justify-content: space-between
   border-radius: 5px
@@ -216,4 +219,5 @@ img,iframe,video
   display: block
   width: 24px
   height: 24px
+  margin-right: 15px
 //@import "media" // Always at the end
